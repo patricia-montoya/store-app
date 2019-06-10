@@ -15,7 +15,6 @@ export const getComics = () => {
     return axios.get(`${PROXY}https://comicvine.gamespot.com/api/volumes/?api_key=${API_KEY}&format=json&limit=25&sort=name:asc&filter=name:%Spiderman%`)
     .then((response) => {
         const comics = response.data.results.map((comic) => massage(comic))
-        console.log(comics)
         return comics
     })
 };
@@ -25,13 +24,5 @@ export const getFilteredComics = (comicFilter) => {
     .then((response) => {
         const comics = response.data.results.map((comic) => massage(comic))
         return comics
-    })
-}
-
-export const getComicDetail = (comicId) => {
-    return axios.get(`${PROXY}https://comicvine.gamespot.com/api/volumes/?api_key=${API_KEY}&format=json&filter=id:${comicId}`)
-    .then((response) => {
-        const comic = massage(response.data.results[0])
-        return comic
     })
 }

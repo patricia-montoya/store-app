@@ -1,6 +1,6 @@
 import React from 'react';
 import { getFilteredComics } from '../services/comics'
-import { FilterForm } from '../components/Filter'
+import { FilterForm } from './styled/Filter'
 
 class ComicFilter extends React.Component {
     state = {

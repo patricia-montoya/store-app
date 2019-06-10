@@ -1,18 +1,18 @@
 import React from 'react'
-import { ProductCard } from './Cards'
+import { ProductCard } from './styled/Cards'
 import { Link } from 'react-router-dom'
 
 class ComicCard extends React.Component {
 
     render() {
-        const { id, name, date, img, price } = this.props
+        const { id, name, date, img, publisher, price } = this.props
 
         return <ProductCard>
                 <img src={img} alt={name}/>
                 <h3>{name}</h3>
                 <p>{date}</p>
                 <h4>${price}</h4>
-                {/* <Link to={`/comic/${id}`}>View Details</Link> */}
+                <Link to={{pathname:`/comic/${id}`, props: this.props}} >View Details</Link>
                 <button>Add to cart</button>
             </ProductCard>
     }
