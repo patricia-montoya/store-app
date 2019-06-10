@@ -12,4 +12,13 @@ export const ProductCard = styled(Card)`
     width: 15%;
     display: inline-block;
     height: 360px;
+
+    img {
+        width: 104px;
+        height: 160px;
+    }
 `;
+
+export const ProductDetail = styled(Card)`
+    
+`

@@ -1,10 +1,17 @@
 import React from 'react'
 import ComicCard from '../components/ComicCard'
 import { getComics } from '../services/comics'
+import ComicFilter from '../components/ComicFilter'
 
 class Home extends React.Component {
     state = {
         comics: []
+    }
+
+    filterComics = (comics) => {
+        this.setState({
+            comics: [...comics]
+        })
     }
 
     componentDidMount() {
@@ -15,9 +22,10 @@ class Home extends React.Component {
 
     render() {
         const { comics } = this.state
-        return (
-            comics.map((comic) => <ComicCard  key={comic.id} {...comic}/>)
-        )         
+        return <>
+            <ComicFilter onFilterComics={this.filterComics}/>
+            {comics.map((comic) => <ComicCard  key={comic.id} {...comic}/>)}
+        </>         
     }
 }
 
