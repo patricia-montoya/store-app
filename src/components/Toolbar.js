@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import {Header} from '../components/styled/Header'
 import ComicFilter from '../components/ComicFilter'
 import appLogo from '../assets/images/logo.png'
-import cartIcon from '../assets/images/cart-icon.png'
 
 const Toolbar = () => {
     return <Header>
@@ -16,7 +15,6 @@ const Toolbar = () => {
                 <li><Link to="/login">Login</Link></li>
             </ul>
         </nav>
-        <img className="cart-icon" src={cartIcon} alt="Shopping cart" />
     </Header>
 }
 
