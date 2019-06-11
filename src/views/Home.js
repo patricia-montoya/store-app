@@ -35,7 +35,7 @@ class Home extends React.Component {
             <ComicFilter onFilterComics={this.filterComics} />
             {comics.map((comic) => <ComicCard  key={comic.id} {...comic} onItemAdded={this.addItemToCart}/>)}
         </>         
-    }
+    } 
 }
 
 export default Home

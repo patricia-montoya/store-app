@@ -35,7 +35,7 @@ export const Header = styled.header`
     li {
         margin: 0;
         box-sizing: border-box;
-        display: flex;
+        display: inline-block;
         height: 100%;
         align-items: center;
     }

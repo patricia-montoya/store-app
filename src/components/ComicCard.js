@@ -14,7 +14,7 @@ class ComicCard extends React.Component {
                 <img src={img} alt={name}/>
                 <h3>{name}</h3>
                 <p>{date}</p>
-                <h4>${price}</h4>
+                <h4>$ {price}</h4>
                 <Link to={{pathname:`/comic/${id}`, comicInfo: this.props}} >View Details</Link>
                 <button onClick={this.addingToCartHandler}>Add to cart</button>
             </ProductCard>

@@ -2,28 +2,28 @@ import React from 'react'
 import CartItem from './CartItem'
 import { Cart } from '../components/styled/Cart'
 
-const ShoppingCart = (props) => {
-    const shoppingList = props.shoppingList
-    console.log(shoppingList)
-    if(shoppingList.length > 0) {
-        return <Cart>
-             <h1>Shopping Cart </h1>
-             <i class="fas fa-shopping-cart"></i>
-            <ul>
-                {shoppingList.map((item) => <CartItem key={item.id} {...item}/>)}
-            </ul>
-        </Cart> 
-    } else {
-        return <Cart>
-            <h1>Shopping Cart </h1>
-            <i class="fas fa-shopping-cart"></i>
-            <p>Your cart is empty! Add some Comics!</p>
-        </Cart>
+class ShoppingCart extends React.Component {
+    state = {
+        shoppingList: []
     }
 
-
-
-     
+    render() {
+        const itemsList = this.props.shoppingList
+        return <Cart>
+                 <h1>Shopping Cart </h1>
+                 <h3>{itemsList.length} Product(s)</h3>
+                 <i className="fas fa-shopping-cart"></i>
+                 {itemsList.length > 0 ?
+                    <>
+                        <ul>
+                            {itemsList.map((item) => <CartItem key={item.id} {...item}/>)} 
+                        </ul> 
+                        <button>Proceed to Checkout</button> 
+                    </> : 
+                <h2>Your shopping cart is empty! Add some comics!</h2> }
+            </Cart> 
+    }
 }
+
 
 export default ShoppingCart

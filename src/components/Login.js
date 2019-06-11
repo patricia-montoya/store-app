@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
-
+import { LoginForm } from './styled/Forms'
+  
 class Login extends Component {
     render() {
         return (
-            <div>
+            <LoginForm>
                 Hi! Welcome to Login!
-            </div>
+            </LoginForm>
         )
     }
 }
