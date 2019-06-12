@@ -13,16 +13,10 @@ const massage = (comic) => ({
 
 export const getComics = () => {
     return axios.get(`${PROXY}https://comicvine.gamespot.com/api/volumes/?api_key=${API_KEY}&format=json&limit=25&sort=name:asc&filter=name:%Spiderman%`)
-    .then((response) => {
-        const comics = response.data.results.map((comic) => massage(comic))
-        return comics
-    })
+    .then((response) => response.data.results.map((comic) => massage(comic)))
 };
 
 export const getFilteredComics = (comicFilter) => {
     return axios.get(`${PROXY}https://comicvine.gamespot.com/api/search/?api_key=${API_KEY}&format=json&limit=20&query=${comicFilter}&resource_type=volume`)
-    .then((response) => {
-        const comics = response.data.results.map((comic) => massage(comic))
-        return comics
-    })
+    .then((response) => response.data.results.map((comic) => massage(comic)))
 }

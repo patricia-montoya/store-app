@@ -48,7 +48,7 @@ export const Header = styled.header`
         border: 4px solid transparent;
         box-sizing: border-box;
         display: block;
-        &:hover, &:active {
+        &:hover, &:active, &.active {
             background: #262626;
             border-bottom: 4px solid #ff9900;
             color: white;

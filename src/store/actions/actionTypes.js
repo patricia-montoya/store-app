@@ -1,0 +1,4 @@
+export const REQUEST_COMICS = 'REQUEST_COMICS';
+export const RECEIVE_COMICS = 'RECEIVE_COMICS';
+export const FILTER_COMICS = 'FILTER_COMICS';
+export const ERROR_COMICS = 'ERROR_COMICS';

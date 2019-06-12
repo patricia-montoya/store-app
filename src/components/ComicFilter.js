@@ -4,21 +4,18 @@ import { FilterForm } from './styled/Filter'
 
 class ComicFilter extends React.Component {
     state = {
-        comicFilter: ''
+        filterText: ''
     }
 
     changeHandler = (e) => {
         this.setState({
-            comicFilter: e.target.value
+            filterText: e.target.value
         })
     }
 
     filterHandler = (e) => {
         e.preventDefault();
-        getFilteredComics(this.state.comicFilter)
-        .then((response) => {
-            this.props.onFilterComics(response)
-        })
+        console.log(this.props)
     }
 
     render() {
