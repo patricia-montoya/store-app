@@ -21,7 +21,7 @@ class Home extends React.Component {
     render() {
         const { comics } = this.props
         return <>
-            <ShoppingCart shoppingList={this.state.shoppingList}/>
+            {/* <ShoppingCart shoppingList={this.state.shoppingList}/> */}
             {comics.data.map((comic) => <ComicCard  key={comic.id} {...comic} onItemAdded={this.addItemToCart}/>)}
         </>         
     } 

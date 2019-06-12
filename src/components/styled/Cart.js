@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Cart = styled.div`
-    width: 25%;
+    /* width: 25%; */
     height: 100%;
     position: fixed;
     z-index: 1;
