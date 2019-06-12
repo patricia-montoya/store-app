@@ -15,7 +15,7 @@ export const ProductCard = styled(Card)`
     box-shadow: 2px 2px 4px 4px #ccc;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
-    
+
     img {
         width: 100%;
         height: 65%;
@@ -39,9 +39,9 @@ export const ProductCard = styled(Card)`
         color: white;
         border-color: black;
     }&:hover {
-        background: #ffa31a;
+        background: #ffcc80;
         color: black;
-        border-color: #ffa31a;
+        border-color: #ffcc80;
     }
 `;
 

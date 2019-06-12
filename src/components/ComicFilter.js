@@ -1,6 +1,6 @@
 import React from 'react';
 import { getFilteredComics } from '../services/comics'
-import { FilterForm } from './styled/Filter'
+import { FilterForm } from './styled/Forms'
 
 class ComicFilter extends React.Component {
     state = {
@@ -20,9 +20,8 @@ class ComicFilter extends React.Component {
 
     render() {
         return <FilterForm onSubmit={this.filterHandler}>
-            <span>Filter: </span>
-            <input name='Filter' value={this.state.comicFilter} onChange={this.changeHandler} placeholder='Filter Comic by Name'/>
-            <input type='submit' value='Filter'/>
+            <input name='Filter' value={this.state.comicFilter} onChange={this.changeHandler} placeholder='Filter'/>
+            <input className="filter-btn"type='submit' value='Filter'/>
         </FilterForm>
     };
 };

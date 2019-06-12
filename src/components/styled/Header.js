@@ -14,6 +14,7 @@ export const Header = styled.header`
     box-sizing: border-box;
     z-index: 90;
     color: azure;
+    font-size: 18px;
 
     .logo {
         margin-top:0.2rem;
@@ -58,8 +59,7 @@ export const Header = styled.header`
     .cart-icon {
         height: 40px;
         width: 45px;
-        margin: 0;
+        margin: 0 10px;
     }
-
 
 `

@@ -3,10 +3,11 @@ import { NavLink } from 'react-router-dom'
 import {Header} from '../styled/Header'
 import ComicFilter from '../ComicFilter'
 import appLogo from '../../assets/images/logo.png'
+import cartIcon from '../../assets/images/cart-icon.png'
 
 const Toolbar = () => {
     return <Header>
-        <img className="logo" src={appLogo} alt="Comic City Logo"/>
+        <img className="logo" src={appLogo} alt="Welcome to Comic city"/>
         <ComicFilter />
         <nav>
             <ul>
@@ -15,6 +16,7 @@ const Toolbar = () => {
                 <li><NavLink to="/login">Login</NavLink></li>
             </ul>
         </nav>
+        <img className="cart-icon" src={cartIcon} alt="Cart"/>
     </Header>   
 }
 
