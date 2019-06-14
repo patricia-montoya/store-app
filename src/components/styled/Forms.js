@@ -7,13 +7,13 @@ const GeneralForm = styled.form.attrs(props => ({
         background: #990000;
         color: white;
         padding: 4px;
-        margin: 2px;
         width: 20%;
         border: 1px solid #990000;
         border-radius: 4px;
         font-family: inherit;
         height: 30px;
         cursor:pointer;
+        margin: 10% 0 5% 40%;
     }
     input[type=submit]:hover{
         border-color: black;
@@ -29,6 +29,10 @@ const GeneralForm = styled.form.attrs(props => ({
         border-radius: 2px;
         outline: none; 
         padding: 0.5rem;
+        box-shadow: none;
+        margin: 0 auto;
+        font-size: 1rem;
+        display: table;
     }
 `
 
@@ -37,7 +41,7 @@ export const FilterForm = styled(GeneralForm)`
     display: block;
 `;
 
-export const RegisterForm = styled(GeneralForm)`
+export const AuthForm = styled(GeneralForm)`
     border: 1px solid #ccc;
     width: 40%;
     margin: 0 auto;
@@ -50,29 +54,12 @@ export const RegisterForm = styled(GeneralForm)`
     h1 {
         text-align: center;
     }
-    span {
+    label {
         display: inline-table;
-    }
-    input {
-        box-shadow: none;
-        display: block;
-        margin: 0 auto;
-        font-size: 1rem;
-        display: table;
     }
 
     input[type=submit] {
-        margin: 10% 0 5% 40%;
-    }
-    
-    input[type=submit]:hover {
-        border-color: black;
-        color: white;
-        background-color: black;
+        
     }
 
-` 
-
-export const LoginForm = styled(GeneralForm)`
-    margin-left: 50%
 `

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProductDetail } from '../components/styled/Cards'
+import { ProductDetail } from '../components/Styled/Cards'
 
 class ComicDetail extends React.Component {
     state = {

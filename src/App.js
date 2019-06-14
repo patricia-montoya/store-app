@@ -9,14 +9,14 @@ import MainLayout from '../src/components/Layouts/MainLayout'
 import Home from './store/containers/Home'
 import ComicDetail from './store/containers/ComicDetail'
 import ShoppingCart from './components/Cart/ShoppingCart'
-import Register from './components/Auth/Register'
+import SignUp from './store/containers/SignUp'
 import Login from './components/Auth/Login'
 
 function Routes() {
   return <>
     <Route exact path="/" component={Home}/>
     <Route path="/comic/:id" component={ComicDetail}/>
-    <Route exact path="/register" component={Register} />
+    <Route exact path="/signUp" component={SignUp} />
     <Route exact path="/login" component={Login} />
     <Route exact path="/cart" component={ShoppingCart} />
     </>

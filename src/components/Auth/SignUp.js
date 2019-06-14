@@ -1,8 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { AuthForm } from '../Styled/Forms'
+import PropTypes from 'prop-types'
 import formHeader from '../../assets/images/form-header.jpg'
-  
-class Login extends Component {
+
+class SignUp extends React.Component {
     state = {
         email: '',
         password: '',
@@ -24,22 +25,26 @@ class Login extends Component {
             password: this.state.password,
             returnSecureToken: true
         }
-        this.props.authUser(authData)
+        this.props.signupUser(authData)
     }
 
     render() {
         return (
             <AuthForm onSubmit={this.submitHandler}>
-                <img src={formHeader} className="header-form" alt="Register Now"/>
-                <h1>Login</h1>
+                <img src={formHeader} className="header-form" alt="Join us!"/>
+                <h1>SignUp</h1>
                 <label>Email</label>
                 <input type="email" value={this.state.email} name="email" onChange={this.changeHandler}/>
                 <label>Password</label>            
                 <input type='password' value={this.state.password} name="password" onChange={this.changeHandler}/>
-                <input type='submit' value='Login'/>
+                <input type='submit' value='Sign Up'/>
             </AuthForm>
         )
     }
 }
 
-export default Login
+SignUp.propTypes = {
+    email:PropTypes.string.isRequired,
+    password: PropTypes.isRequired
+}
+export default SignUp;
