@@ -1,5 +1,5 @@
 import React from 'react'
-import { Item } from './styled/Cart'
+import { Item } from '../Styled/Cart'
 
 class CartItem extends React.Component {
     state = {

@@ -1,5 +1,5 @@
 import React from 'react'
-import ComicCard from '../components/ComicCard'
+import ComicCard from '../components/Comics/ComicCard'
 
 class Home extends React.Component {
     

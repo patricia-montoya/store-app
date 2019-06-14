@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProductCard } from './styled/Cards'
+import { ProductCard } from '../Styled/Cards'
 import { Link } from 'react-router-dom'
 
 class ComicCard extends React.Component {

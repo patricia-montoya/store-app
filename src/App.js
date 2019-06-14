@@ -4,13 +4,13 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import configureStore from './store/storeConfig/configureStore'
 
-import MainLayout from '../src/components/layouts/MainLayout'
+import MainLayout from '../src/components/Layouts/MainLayout'
 
 import Home from './store/containers/Home'
 import ComicDetail from './store/containers/ComicDetail'
-import ShoppingCart from './components/ShoppingCart'
-import Register from './components/Register'
-import Login from './components/Login'
+import ShoppingCart from './components/Cart/ShoppingCart'
+import Register from './components/Auth/Register'
+import Login from './components/Auth/Login'
 
 function Routes() {
   return <>

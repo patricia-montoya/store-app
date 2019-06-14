@@ -1,7 +1,7 @@
 import React from 'react'
-import { RegisterForm } from './styled/Forms'
+import { RegisterForm } from '../Styled/Forms'
 import PropTypes from 'prop-types'
-import formHeader from '../assets/images/form-header.jpg'
+import formHeader from '../../assets/images/form-header.jpg'
 
 class Register extends React.Component {
     state = {

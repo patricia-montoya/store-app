@@ -1,5 +1,5 @@
 import React from 'react';
-import { FilterForm } from './styled/Forms'
+import { FilterForm } from '../Styled/Forms'
 
 class ComicFilter extends React.Component {
     state = {

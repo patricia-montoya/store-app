@@ -1,8 +1,8 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import {Header} from './styled/Header'
-import appLogo from '../assets/images/logo.png'
-import cartIcon from '../assets/images/cart-icon.png'
+import {Header} from '../Styled/Header'
+import appLogo from '../../assets/images/logo.png'
+import cartIcon from '../../assets/images/cart-icon.png'
 
 class Toolbar extends React.Component {
     state = {

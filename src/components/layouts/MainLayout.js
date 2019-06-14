@@ -1,6 +1,6 @@
 import React from 'react'
-import { Layout } from '../styled/Layouts'
-import Toolbar from '../Toolbar'
+import { Layout } from '../Styled/Layouts'
+import Toolbar from './Toolbar'
 
 const MainLayout = (props) => {
     return <Layout>
