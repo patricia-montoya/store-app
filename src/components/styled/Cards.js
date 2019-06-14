@@ -3,6 +3,24 @@ import styled from 'styled-components'
 export const Card = styled.div`
     color: black;
     text-align: center;
+    .comic-btn,
+    .comic-link {
+        text-decoration: none;
+        background: #990000;
+        color: white;
+        padding: 4px;
+        margin: 2px;
+        border: 1px solid #990000;
+        border-radius: 4px;
+        font-family: inherit;
+        font-size: 16px;
+        cursor:pointer;
+    }.comic-btn:hover,
+    .comic-link:hover{
+        background: black;
+        color: white;
+        border-color: black;
+    }
 `;
 
 export const ProductCard = styled(Card)`
@@ -21,28 +39,12 @@ export const ProductCard = styled(Card)`
         height: 65%;
     }
 
-    .comic-btn,
-    .comic-link {
-        text-decoration: none;
-        background: #990000;
-        color: white;
-        padding: 4px;
-        margin: 2px;
-        border: 1px solid #990000;
-        border-radius: 4px;
-        font-family: inherit;
-        font-size: 16px;
-        cursor:pointer;
-    }.comic-btn:hover,
-    .comic-link:hover{
-        background: black;
-        color: white;
-        border-color: black;
-    }&:hover {
+    &:hover {
         background: #ffcc80;
         color: black;
         border-color: #ffcc80;
     }
+
 `;
 
 export const ProductDetail = styled(Card)`

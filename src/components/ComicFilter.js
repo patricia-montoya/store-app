@@ -1,5 +1,4 @@
 import React from 'react';
-import { getFilteredComics } from '../services/comics'
 import { FilterForm } from './styled/Forms'
 
 class ComicFilter extends React.Component {
@@ -15,12 +14,13 @@ class ComicFilter extends React.Component {
 
     filterHandler = (e) => {
         e.preventDefault();
-        console.log(this.props)
     }
 
     render() {
+        console.log(this.props)
         return <FilterForm onSubmit={this.filterHandler}>
-            <input name='Filter' value={this.state.comicFilter} onChange={this.changeHandler} placeholder='Filter'/>
+            <span>Filter comics</span>
+            <input name='Filter' value={this.state.filterText} onChange={this.changeHandler} />
             <input className="filter-btn"type='submit' value='Filter'/>
         </FilterForm>
     };

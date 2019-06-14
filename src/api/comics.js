@@ -1,5 +1,4 @@
 import axios from 'axios';
-const PROXY = 'https://cors-anywhere.herokuapp.com/';
 const API_KEY = '76381272a595d793a97ea22b17cb3ba0f51af9fa';
 
 const massage = (comic) => ({
@@ -12,11 +11,11 @@ const massage = (comic) => ({
 });
 
 export const getComics = () => {
-    return axios.get(`${PROXY}https://comicvine.gamespot.com/api/volumes/?api_key=${API_KEY}&format=json&limit=25&sort=name:asc&filter=name:%Vader%`)
+    return axios.get(`https://comicvine.gamespot.com/api/volumes/?api_key=${API_KEY}&format=json&limit=25&sort=name:asc&filter=name:%Flash%`)
     .then((response) => response.data.results.map((comic) => massage(comic)))
 };
 
 export const getFilteredComics = (comicFilter) => {
-    return axios.get(`${PROXY}https://comicvine.gamespot.com/api/search/?api_key=${API_KEY}&format=json&limit=20&query=${comicFilter}&resource_type=volume`)
+    return axios.get(`https://comicvine.gamespot.com/api/search/?api_key=${API_KEY}&format=json&limit=20&query=${comicFilter}&resource_type=volume`)
     .then((response) => response.data.results.map((comic) => massage(comic)))
 }

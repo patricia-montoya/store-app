@@ -1,12 +1,8 @@
 import React from 'react'
 import ComicCard from '../components/ComicCard'
-import ShoppingCart from '../components/ShoppingCart'
 
 class Home extends React.Component {
-    state = {
-        shoppingList: []
-    }
-
+    
     addItemToCart = (id, name, price, img) => {
         const shoppingList = this.state.shoppingList
         const item = {id, name, price, img}
@@ -14,14 +10,12 @@ class Home extends React.Component {
     }
 
     componentDidMount() {
-        console.log(this.props)
         this.props.fetchComics()
     }
 
     render() {
         const { comics } = this.props
         return <>
-            {/* <ShoppingCart shoppingList={this.state.shoppingList}/> */}
             {comics.data.map((comic) => <ComicCard  key={comic.id} {...comic} onItemAdded={this.addItemToCart}/>)}
         </>         
     } 

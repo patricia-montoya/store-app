@@ -1,17 +1,17 @@
 import styled from 'styled-components'
 
-export const Cart = styled.div`
-    /* width: 25%; */
-    height: 100%;
-    position: fixed;
-    z-index: 1;
+export const ItemsContainer = styled.div`
+    margin: 20px;
+    color: #8c8c8c;
     top: 60px; 
-    right: 0;
-    align-items: center;
     padding: 10px 0;
-    margin-right: 0;
     box-sizing: border-box;
-    border: 4px solid black;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    p {
+        text-align: center;
+    }
+
 `
 
 export const Item = styled.li`

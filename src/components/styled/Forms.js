@@ -8,7 +8,7 @@ const GeneralForm = styled.form.attrs(props => ({
         color: white;
         padding: 4px;
         margin: 2px;
-        width: 25%;
+        width: 20%;
         border: 1px solid #990000;
         border-radius: 4px;
         font-family: inherit;
@@ -16,9 +16,9 @@ const GeneralForm = styled.form.attrs(props => ({
         cursor:pointer;
     }
     input[type=submit]:hover{
-        background: azure;
-        color: black;
-        border-color: azure;
+        border-color: black;
+        color: white;
+        background-color: black;
     }
 
     input {
@@ -33,7 +33,7 @@ const GeneralForm = styled.form.attrs(props => ({
 `
 
 export const FilterForm = styled(GeneralForm)`
-    width: 30%;
+    width: 100%;
     display: block;
 `;
 

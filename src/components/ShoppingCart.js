@@ -1,6 +1,5 @@
 import React from 'react'
-import CartItem from './CartItem'
-import { Cart } from '../components/styled/Cart'
+import { ItemsContainer } from './styled/Cart'
 
 class ShoppingCart extends React.Component {
     state = {
@@ -8,22 +7,12 @@ class ShoppingCart extends React.Component {
     }
 
     render() {
-        const itemsList = this.props.shoppingList
-        return <Cart>
-                 <h1>Shopping Cart </h1>
-                 <h3>{itemsList.length} Product(s)</h3>
-                 <i className="fas fa-shopping-cart"></i>
-                 {itemsList.length > 0 ?
-                    <>
-                        <ul>
-                            {itemsList.map((item) => <CartItem key={item.id} {...item}/>)} 
-                        </ul> 
-                        <button>Proceed to Checkout</button> 
-                    </> : 
-                <h2>Your shopping cart is empty! Add some comics!</h2> }
-            </Cart> 
+        console.log(this.props)
+        return <ItemsContainer>
+                <h2><i className="fas fa-shopping-cart"></i>  Shopping Cart</h2>
+                <p>Your shopping cart is empty! Add some comics! </p>
+            </ItemsContainer>
     }
 }
-
 
 export default ShoppingCart

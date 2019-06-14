@@ -22,6 +22,7 @@ export const Header = styled.header`
     }
     nav {
         height: 100%;
+        margin-left: 45%;
     }
 
     ul {
@@ -31,6 +32,7 @@ export const Header = styled.header`
         display: flex;
         align-items: center;
         height: 100%;
+        
     }
 
     li {
@@ -56,9 +58,15 @@ export const Header = styled.header`
         }
     }
 
+    .cart-btn {
+        border: 0;
+        background: transparent;
+        outline: none;
+    }
+
     .cart-icon {
-        height: 40px;
-        width: 45px;
+        height: 25px;
+        width: 35px;
         margin: 0 10px;
     }
 

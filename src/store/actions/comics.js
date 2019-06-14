@@ -1,5 +1,5 @@
 import { REQUEST_COMICS, RECEIVE_COMICS, FILTER_COMICS, ERROR_COMICS } from './actionTypes'
-import { getComics, getFilteredComics } from '../../services/comics'
+import { getComics, getFilteredComics } from '../../api/comics'
 
 export const requestComics = () => ({
     type: REQUEST_COMICS

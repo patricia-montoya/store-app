@@ -9,7 +9,7 @@ class ComicCard extends React.Component {
     }
     
     render() {
-        const { id, name, date, img, price } = this.props
+        const { id, name, img, price } = this.props
         return <ProductCard>
                 <img src={img} alt={name}/>
                     <p>{name}</p>

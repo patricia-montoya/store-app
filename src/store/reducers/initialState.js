@@ -7,7 +7,6 @@ export default {
 
     shoppingCart: {
         data: [],
-        isFetching: false,
         error: null
     },
     

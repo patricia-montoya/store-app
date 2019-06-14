@@ -6,10 +6,11 @@ import configureStore from './store/storeConfig/configureStore'
 
 import MainLayout from '../src/components/layouts/MainLayout'
 
-import Home from './containers/Home'
-import ComicDetail from '../src/components/ComicDetail'
-import Register from '../src/components/Register'
-import Login from '../src/components/Login'
+import Home from './store/containers/Home'
+import ComicDetail from './store/containers/ComicDetail'
+import ShoppingCart from './components/ShoppingCart'
+import Register from './components/Register'
+import Login from './components/Login'
 
 function Routes() {
   return <>
@@ -17,6 +18,7 @@ function Routes() {
     <Route path="/comic/:id" component={ComicDetail}/>
     <Route exact path="/register" component={Register} />
     <Route exact path="/login" component={Login} />
+    <Route exact path="/cart" component={ShoppingCart} />
     </>
 }
 
