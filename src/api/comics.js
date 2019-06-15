@@ -16,6 +16,6 @@ export const getComics = () => {
 };
 
 export const getFilteredComics = (comicFilter) => {
-    return axios.get(`https://comicvine.gamespot.com/api/search/?api_key=${API_KEY}&format=json&limit=20&query=${comicFilter}&resource_type=volume`)
+    return axios.get(`https://comicvine.gamespot.com/api/search/?api_key=${API_KEY}&format=json&limit=20&query=${comicFilter}`)
     .then((response) => response.data.results.map((comic) => massage(comic)))
 }

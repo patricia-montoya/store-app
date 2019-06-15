@@ -14,14 +14,14 @@ class ComicFilter extends React.Component {
 
     filterHandler = (e) => {
         e.preventDefault();
+        this.props.fetchFilteredComics(this.state.filterText)
     }
 
     render() {
         console.log(this.props)
         return <FilterForm onSubmit={this.filterHandler}>
-            <span>Filter comics</span>
-            <input name='Filter' value={this.state.filterText} onChange={this.changeHandler} />
-            <input className="filter-btn"type='submit' value='Filter'/>
+            <input name='Filter' value={this.state.filterText} onChange={this.changeHandler} placeholder="Filter Comics"/>
+            <input type='submit' value='Filter'/>
         </FilterForm>
     };
 };

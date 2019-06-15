@@ -37,8 +37,23 @@ const GeneralForm = styled.form.attrs(props => ({
 `
 
 export const FilterForm = styled(GeneralForm)`
-    width: 100%;
-    display: block;
+    width: 50%;
+    margin: 5% 0 0 10%;
+
+    input {
+        margin-left: 5%; 
+        display: inline-block;
+    }
+
+    input[type=submit] {
+        display: inline-block;
+        width: 50%;
+    }
+    input[type=submit]:hover{
+        border-color: white;
+        color: black;
+        background-color: white;
+    }
 `;
 
 export const AuthForm = styled(GeneralForm)`

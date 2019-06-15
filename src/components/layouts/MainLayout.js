@@ -4,10 +4,8 @@ import Toolbar from './Toolbar'
 
 class MainLayout extends React.Component {
     render() {
-        console.log(this.props)
-
         return <Layout>
-            <Toolbar isAuth={this.props.isAuthenticated}/>
+            <Toolbar isAuth={this.props.isAuthenticated} {...this.props}/>
             <main className="main-content"> { this.props.children }</main>
         </Layout>
     }
