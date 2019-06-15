@@ -11,7 +11,8 @@ export default {
     },
     
     user: {
-        data: [],
+        token: null,
+        userId: null,
         isFetching: false, 
         error: null,
     }

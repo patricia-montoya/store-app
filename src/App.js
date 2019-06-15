@@ -4,18 +4,20 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import configureStore from './store/storeConfig/configureStore'
 
-import MainLayout from '../src/components/Layouts/MainLayout'
+import MainLayout from './store/containers/MainLayout'
 
 import Home from './store/containers/Home'
 import ComicDetail from './store/containers/ComicDetail'
 import ShoppingCart from './components/Cart/ShoppingCart'
 import Auth from './store/containers/Auth'
+import Logout from './store/containers/Logout'
 
 function Routes() {
   return <>
     <Route exact path="/" component={Home}/>
     <Route path="/comic/:id" component={ComicDetail}/>
     <Route exact path="/auth" component={Auth} />
+    <Route exact path="/logout" component={Logout} />
     <Route exact path="/cart" component={ShoppingCart} />
     </>
 }

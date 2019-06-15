@@ -5,9 +5,10 @@ export const authRequest = () => ({
     type: AUTH_REQUEST
 })
 
-export const authSuccess = (authData) => ({
+export const authSuccess = (token, userId) => ({
     type: AUTH_SUCCESS,
-    payload: authData
+    token: token,
+    userId: userId
 })
 
 export const authError = (error) => ({
@@ -30,7 +31,7 @@ export const signup = (authData) => (dispatch) => {
     signupNewUser(authData)
     .then((response) => {
         console.log(response)
-        dispatch(authSuccess(response.data))
+        dispatch(authSuccess(response.data.idToken, response.data.localId))
         dispatch(checkAuthTimeout(response.data.expiresIn))
     })
     .catch((error) => {
@@ -44,7 +45,7 @@ export const signin = (authData) => (dispatch) => {
     signinUser(authData) 
     .then((response) => {
         console.log(response)
-        dispatch(authSuccess(response.data))
+        dispatch(authSuccess(response.data.idToken, response.data.localId))
         dispatch(checkAuthTimeout(response.data.expiresIn))
     })
     .catch((error) => {

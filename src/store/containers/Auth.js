@@ -5,7 +5,8 @@ import { signup, signin } from '../actions/auth'
 import Auth from '../../components/Auth/Auth'
 
 const mapStateToProps = ({ auth }) => ({
-    auth
+    auth,
+    isAuthenticated: auth.token !== null
 })
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({

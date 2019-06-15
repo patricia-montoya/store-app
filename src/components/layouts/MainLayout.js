@@ -2,11 +2,15 @@ import React from 'react'
 import { Layout } from '../Styled/Layouts'
 import Toolbar from './Toolbar'
 
-const MainLayout = (props) => {
-    return <Layout>
-        <Toolbar />
-        <main className="main-content"> { props.children }</main>
-    </Layout>
+class MainLayout extends React.Component {
+    render() {
+        console.log(this.props)
+
+        return <Layout>
+            <Toolbar isAuth={this.props.isAuthenticated}/>
+            <main className="main-content"> { this.props.children }</main>
+        </Layout>
+    }
 };
 
 export default MainLayout;

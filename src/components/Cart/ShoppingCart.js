@@ -7,7 +7,6 @@ class ShoppingCart extends React.Component {
     }
 
     render() {
-        console.log(this.props)
         return <ItemsContainer>
                 <h2><i className="fas fa-shopping-cart"></i>  Shopping Cart</h2>
                 <p>Your shopping cart is empty! Add some comics! </p>
