@@ -1,13 +1,12 @@
 import React from 'react'
 import { AuthForm } from '../Styled/Forms'
-import PropTypes from 'prop-types'
 import formHeader from '../../assets/images/form-header.jpg'
 
-class SignUp extends React.Component {
+class Auth extends React.Component {
     state = {
         email: '',
         password: '',
-        submitted: false
+        isSignUp: true
     }
 
     changeHandler = (e) => {
@@ -25,26 +24,42 @@ class SignUp extends React.Component {
             password: this.state.password,
             returnSecureToken: true
         }
-        this.props.signupUser(authData)
+
+        if(this.state.isSignUp) {
+            this.props.signin(authData)
+        } else {
+            this.props.signup(authData)
+        }
+    }
+
+    swithAuthModeHandler = () => {
+        this.setState(prevState => {
+            return { isSignUp: !prevState.isSignUp}
+        })
     }
 
     render() {
-        return (
+        let errorMessage = ''
+        if(this.props.auth) {
+            if(this.props.auth.error) {
+                errorMessage = this.props.auth.error.message
+            }
+        }
+
+        return ( <>
             <AuthForm onSubmit={this.submitHandler}>
                 <img src={formHeader} className="header-form" alt="Join us!"/>
-                <h1>SignUp</h1>
+                {errorMessage}
+                <h1>Sign {this.state.isSignUp ? 'In' : 'Up'}</h1>
                 <label>Email</label>
                 <input type="email" value={this.state.email} name="email" onChange={this.changeHandler}/>
                 <label>Password</label>            
                 <input type='password' value={this.state.password} name="password" onChange={this.changeHandler}/>
-                <input type='submit' value='Sign Up'/>
+                <input type='submit' value={this.state.isSignUp ? 'Sign In' : 'Sign Up'}/>
             </AuthForm>
-        )
+                <button onClick={this.swithAuthModeHandler}>Switch to Sign {this.state.isSignUp ? 'Up' : 'In'}</button>
+        </> )
     }
 }
 
-SignUp.propTypes = {
-    email:PropTypes.string.isRequired,
-    password: PropTypes.isRequired
-}
-export default SignUp;
+export default Auth;

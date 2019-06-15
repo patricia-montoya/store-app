@@ -7,10 +7,7 @@ export const ADD_ITEM = 'ADD_ITEM';
 export const REMOVE_ITEM = 'REMOVE_ITEM';
 export const ERROR_ITEM = 'ERROR_ITEM';
 
-export const SIGNUP_REQUEST = 'SIGNUP_REQUEST';
-export const SIGNUP_SUCCESS = 'SIGNUP_SUCCESS';
-export const SIGNUP_ERROR = 'SIGNUP_ERROR';
-
-export const LOGIN_REQUEST = 'LOGIN_REQUEST';
-export const LOGIN_SUCCES = 'LOGIN_SUCCES';
-export const LOGIN_ERROR = 'LOGIN_ERROR';
+export const AUTH_REQUEST = 'AUTH_REQUEST';
+export const AUTH_SUCCESS = 'AUTH_SUCCESS';
+export const AUTH_ERROR = 'AUTH_ERROR';
+export const AUTH_LOGOUT = 'AUTH_LOGOUT'

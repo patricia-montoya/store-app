@@ -21,8 +21,7 @@ class Toolbar extends React.Component {
             <nav>
                 <ul>
                     <li><NavLink to="/" exact>Home</NavLink></li>
-                    <li><NavLink to="/signUp">Sign Up</NavLink></li>
-                    <li><NavLink to="/login">Login</NavLink></li>
+                    <li><NavLink to="/auth">Authenticate</NavLink></li>
                     <li><NavLink to="/cart"><img className="cart-icon" src={cartIcon} alt="Cart"/></NavLink></li>
                 </ul>
             </nav>

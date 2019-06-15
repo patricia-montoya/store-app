@@ -10,9 +10,9 @@ export default {
         error: null
     },
     
-    users: {
+    user: {
         data: [],
-        isFetching: false,
-        error: null
+        isFetching: false, 
+        error: null,
     }
 }

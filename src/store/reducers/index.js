@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux'
-import comics from './comics'
-import users from './users'
-import shoppingCart from './shoppingCart'
+import comicsReducer from './comics'
+import authReducer from './auth'
 
 export default combineReducers({
-    comics,
-    users,
-    shoppingCart
+    comics: comicsReducer,
+    auth: authReducer
 })
