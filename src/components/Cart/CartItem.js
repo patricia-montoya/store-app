@@ -2,48 +2,33 @@ import React from 'react'
 import { Item } from '../Styled/Cart'
 
 class CartItem extends React.Component {
-    state = {
-        totalPrice: parseFloat(this.props.price),
-        quantity: 1
+    removeHandler = (id) => {
+        this.props.removeItem(id)
     }
 
-    addItem = (price) => {
-        const quantity = this.state.quantity
-        let totalPrice = this.state.totalPrice
-        totalPrice = totalPrice + price
+    addQuantityHandler = (id) => {
+        this.props.addQuantity(id)
+    } 
 
-        this.setState({
-            totalPrice: totalPrice,
-            quantity: quantity + 1
-        })
-    }
-
-    subsItem = (price) => {
-        const quantity = this.state.quantity
-        let totalPrice = this.state.totalPrice
-
-        if(totalPrice > 0.0) {
-            totalPrice = totalPrice - price
-            
-            this.setState({
-                totalPrice: totalPrice,
-                quantity: quantity - 1
-            })
-        }
-    }
+    subtractQuantityHandler = (id) => {
+        this.props.subtractQuantity(id)
+    } 
 
     render() {
-        const {name, price, img} = this.props
-        const priceNum = parseFloat(price)
+        console.log(this.props)
+        const {id, name, price, img, quantity} = this.props
         return <Item>
-            <button>X</button>
-            <img src={img} alt="Comic"/>
-            <span>{name}</span>
-            <p>$ {price}</p>
-            <button onClick={() => this.addItem(priceNum)}>+</button>
-            <p>{this.state.quantity}</p>
-            <button onClick={() => this.subsItem(priceNum)}>-</button>
-            <h1>$ {this.state.totalPrice.toFixed(2)}</h1>
+            <button className="item-delete" onClick={() => this.removeHandler(id)}><i className="fas fa-times-circle"></i></button>
+            <img className="item-img" src={img} alt="Comic"/>
+            <div className="item-info">
+                <label className="item-name">{name}</label>
+                <p>$ {price}</p>
+                <div>
+                    <button onClick={() => this.addQuantityHandler(id)}><i className="fas fa-plus"></i></button>
+                    <label>{quantity}</label>
+                    <button onClick={() => this.subtractQuantityHandler(id)}><i className="fas fa-minus"></i></button>
+                </div>
+            </div>
         </Item>
     }
 }

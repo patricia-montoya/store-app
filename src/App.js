@@ -8,7 +8,6 @@ import MainLayout from './store/containers/MainLayout'
 
 import Home from './store/containers/Home'
 import ComicDetail from './store/containers/ComicDetail'
-import ShoppingCart from './components/Cart/ShoppingCart'
 import Auth from './store/containers/Auth'
 import Logout from './store/containers/Logout'
 
@@ -18,7 +17,6 @@ function Routes() {
     <Route path="/comic/:id" component={ComicDetail}/>
     <Route exact path="/auth" component={Auth} />
     <Route exact path="/logout" component={Logout} />
-    <Route exact path="/cart" component={ShoppingCart} />
     </>
 }
 

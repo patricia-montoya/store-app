@@ -62,6 +62,8 @@ export const Header = styled.header`
         border: 0;
         background: transparent;
         outline: none;
+        margin-top: 16px;
+        cursor: pointer;
     }
 
     .cart-icon {

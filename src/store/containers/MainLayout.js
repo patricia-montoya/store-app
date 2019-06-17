@@ -1,15 +1,20 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { fetchFilteredComics } from '../actions/comics'
+import { addQuantity, subtractQuantity, removeItem } from '../actions/shoppingCart'
 
 import MainLayout from '../../components/Layouts/MainLayout'
 
-const mapStateToProps = ({ auth }) => ({
-    isAuthenticated: auth.token !== null
+const mapStateToProps = ({ auth, shoppingCart }) => ({
+    isAuthenticated: auth.token !== null,
+    shoppingCart
 })
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-    fetchFilteredComics
+    fetchFilteredComics,
+    addQuantity,
+    subtractQuantity,
+    removeItem
 }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(MainLayout)

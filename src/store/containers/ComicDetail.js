@@ -1,8 +1,15 @@
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import ComicDetail from '../../views/ComicDetail'
+import { addItem } from '../actions/shoppingCart'
 
-const mapStateToProps = ({comics}) => ({
-    comics
+const mapStateToProps = ({comics, shoppingCart}) => ({
+    comics,
+    shoppingCart
 })
 
-export default connect(mapStateToProps)(ComicDetail)
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+    addItem
+},dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(ComicDetail)

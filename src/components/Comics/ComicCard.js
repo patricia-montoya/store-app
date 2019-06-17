@@ -3,9 +3,15 @@ import { ProductCard } from '../Styled/Cards'
 import { Link } from 'react-router-dom'
 
 class ComicCard extends React.Component {
-    addingToCartHandler = () => {
-        const { id, name, price, img }  = this.props
-        this.props.onItemAdded(id, name, price, img)
+    addItemHandler = () => {
+        const item = {
+            id: this.props.id,
+            name: this.props.name,
+            img: this.props.img,
+            price: this.props.price
+        }
+
+        this.props.addItem(item)
     }
     
     render() {
@@ -15,7 +21,7 @@ class ComicCard extends React.Component {
                     <p>{name}</p>
                     <p>$ {price}</p>
                     <Link className="comic-link" to={{pathname:`/comic/${id}`, comicInfo: this.props}} >View Details</Link>
-                    <button className="comic-btn" onClick={this.addingToCartHandler}>Add to cart</button>
+                    <button className="comic-btn" onClick={this.addItemHandler}>Add to cart</button>
             </ProductCard>
     }
 }

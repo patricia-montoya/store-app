@@ -4,10 +4,6 @@ import { logout } from '../actions/auth'
 
 import Logout from '../../components/Auth/Logout'
 
-const mapStateToProps = ({ auth }) => ({
-    auth
-})
-
 const mapDispatchToProps = (dispatch) => bindActionCreators({
     logout
 }, dispatch);

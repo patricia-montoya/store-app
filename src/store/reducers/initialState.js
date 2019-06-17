@@ -6,8 +6,9 @@ export default {
     },
 
     shoppingCart: {
-        data: [],
-        error: null
+        addedItems: [],
+        error: null,
+        totalPrice: 0
     },
     
     user: {
@@ -16,4 +17,5 @@ export default {
         isFetching: false, 
         error: null,
     }
+
 }

@@ -18,7 +18,6 @@ class ComicFilter extends React.Component {
     }
 
     render() {
-        console.log(this.props)
         return <FilterForm onSubmit={this.filterHandler}>
             <input name='Filter' value={this.state.filterText} onChange={this.changeHandler} placeholder="Filter Comics"/>
             <input type='submit' value='Filter'/>

@@ -6,6 +6,18 @@ class ComicDetail extends React.Component {
         comic: {}
     }
 
+    addItemHandler = () => {
+        const item = {
+            id: this.state.comic.id,
+            name: this.state.comic.name,
+            img: this.state.comic.img,
+            price: this.state.comic.price,
+            quantity: 1
+        }
+
+        this.props.addItem(item)
+    }
+
     componentDidMount() {
         const { match, comics } = this.props
         if(match.params.id) {
@@ -17,7 +29,6 @@ class ComicDetail extends React.Component {
     }
 
     render() {
-        console.log(this.state)
         const { id, name, date, img, price, publisher} = this.state.comic
         return <ProductDetail>
                 <p>ID: {id}</p>
@@ -26,7 +37,7 @@ class ComicDetail extends React.Component {
                 <p>Release date: {date}</p>
                 <h4>Publisher: {publisher}</h4>
                 <h4>${price}</h4>
-                <button className="comic-btn">Add to cart</button>
+                <button className="comic-btn" onClick={this.addItemHandler}>Add to cart</button>
         </ProductDetail>
     }
 }
