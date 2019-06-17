@@ -5,3 +5,12 @@ body {
   background: url(https://wallpapercave.com/wp/RoGBhzh.jpg) center/cover no-repeat fixed;
 }
 
+.mode-btn {
+  text-align: center;
+  cursor: pointer;
+  display: block;
+  margin: 5%;
+  text-decoration: underline;
+  color: #007acc;
+}
+

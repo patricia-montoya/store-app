@@ -33,7 +33,7 @@ class Auth extends React.Component {
         }
     }
 
-    swithAuthModeHandler = () => {
+    switchAuthModeHandler = () => {
         this.setState(prevState => {
             return { isSignUp: !prevState.isSignUp}
         })
@@ -64,7 +64,7 @@ class Auth extends React.Component {
                 <input type='password' value={this.state.password} name="password" onChange={this.changeHandler}/>
                 <input type='submit' value={this.state.isSignUp ? 'Sign In' : 'Sign Up'}/>
             </AuthForm>
-                <button onClick={this.swithAuthModeHandler}>Switch to Sign {this.state.isSignUp ? 'Up' : 'In'}</button>
+                <a className="mode-btn" onClick={this.switchAuthModeHandler}>SWITCH TO SIGN  {this.state.isSignUp ? 'UP' : 'IN'}</a>
         </> )
     }
 }

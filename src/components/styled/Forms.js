@@ -58,13 +58,8 @@ export const FilterForm = styled(GeneralForm)`
 
 export const AuthForm = styled(GeneralForm)`
     border: 1px solid #ccc;
-    width: 40%;
+    width: 45%;
     margin: 0 auto;
-
-    .header-form {
-        height: 300px;
-        width: 100%;
-    }
 
     h1 {
         text-align: center;
@@ -75,6 +70,11 @@ export const AuthForm = styled(GeneralForm)`
 
     input[type=submit] {
         
+    }
+
+    .header-form {
+        height: 300px;
+        width: 100%;
     }
 
 `
